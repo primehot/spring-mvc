@@ -1,7 +1,7 @@
 package springdev.springmvc.controllers;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import springdev.springmvc.domain.Category;
 import springdev.springmvc.domain.UnitOfMeasure;
@@ -14,6 +14,7 @@ import java.util.Optional;
  * Created by oleht on 20.12.2017
  */
 @Controller
+@Slf4j
 public class IndexController {
 
     private CategoryRepository categoryRepository;
@@ -26,6 +27,8 @@ public class IndexController {
 
     @RequestMapping({"","/","/index"})
     public String getIndexPage() {
+        log.debug("getIndexPage request");
+
         Optional<Category> category = categoryRepository.findByDescription("American");
         Optional<UnitOfMeasure> unit = unitOfMeasureRepository.findByDescription("Teaspoon");
 
