@@ -1,39 +1,27 @@
 package springdev.springmvc.controllers;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import springdev.springmvc.domain.Category;
-import springdev.springmvc.domain.UnitOfMeasure;
-import springdev.springmvc.repositories.CategoryRepository;
-import springdev.springmvc.repositories.UnitOfMeasureRepository;
-
-import java.util.Optional;
+import springdev.springmvc.services.RecipeService;
 
 /**
  * Created by oleht on 20.12.2017
  */
 @Controller
-@Slf4j
+//@Slf4j
 public class IndexController {
 
-    private CategoryRepository categoryRepository;
-    private UnitOfMeasureRepository unitOfMeasureRepository;
+    private final RecipeService recipeService;
 
-    public IndexController(CategoryRepository categoryRepository, UnitOfMeasureRepository unitOfMeasureRepository) {
-        this.categoryRepository = categoryRepository;
-        this.unitOfMeasureRepository = unitOfMeasureRepository;
+    public IndexController(RecipeService recipeService) {
+        this.recipeService = recipeService;
     }
 
-    @RequestMapping({"","/","/index"})
-    public String getIndexPage() {
-        log.debug("getIndexPage request");
+    @RequestMapping({"", "/", "/index"})
+    public String getIndexPage(Model model) {
 
-        Optional<Category> category = categoryRepository.findByDescription("American");
-        Optional<UnitOfMeasure> unit = unitOfMeasureRepository.findByDescription("Teaspoon");
-
-        System.out.println("Cat id is: " + category.get().getId());
-        System.out.println("Unit id is: " + unit.get().getId());
+        model.addAttribute("recipes", recipeService.getRecipes());
 
         return "index";
     }
