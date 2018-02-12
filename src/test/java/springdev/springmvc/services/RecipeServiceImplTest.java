@@ -8,19 +8,19 @@ import springdev.springmvc.domain.Recipe;
 import springdev.springmvc.repositories.RecipeRepository;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.ArgumentMatchers.anyLong;
+import static org.mockito.Mockito.*;
 
 /**
  * Created by oleht on 20.01.2018
  */
 public class RecipeServiceImplTest {
 
-    RecipeServiceImpl recipeService;
+    RecipeService recipeService;
 
     @Mock
     RecipeRepository recipeRepository;
@@ -30,6 +30,18 @@ public class RecipeServiceImplTest {
         MockitoAnnotations.initMocks(this);
 
         recipeService = new RecipeServiceImpl(this.recipeRepository);
+    }
+
+    @Test
+    public void getRecipesById() {
+        Recipe r = new Recipe();
+        Optional<Recipe> o = Optional.of(r);
+
+        when(recipeRepository.findById(anyLong())).thenReturn(o);
+        Recipe result = recipeService.getRecipeById(1l);
+        assertNotNull(result);
+        verify(recipeRepository, times(1)).findById(1l);
+        verify(recipeRepository, never()).findAll();
     }
 
     @Test

@@ -5,6 +5,7 @@ import springdev.springmvc.domain.Recipe;
 import springdev.springmvc.repositories.RecipeRepository;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 /**
@@ -25,5 +26,15 @@ public class RecipeServiceImpl implements RecipeService {
         Set<Recipe> recipeSet = new HashSet<>();
         recipeRepository.findAll().iterator().forEachRemaining(recipeSet::add);
         return recipeSet;
+    }
+
+    @Override
+    public Recipe getRecipeById(Long id) {
+        Optional<Recipe> r = recipeRepository.findById(1L);
+        if (!r.isPresent()) {
+            throw new RuntimeException("Recipe was not found!");
+        }
+
+        return r.get();
     }
 }
