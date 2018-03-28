@@ -7,9 +7,6 @@ import springdev.springmvc.domain.Notes;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by oleht on 22.01.2018
- */
 public class NotesCommandToNotesTest {
 
     public static final Long ID_VALUE = new Long(1L);

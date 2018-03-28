@@ -7,9 +7,6 @@ import springdev.springmvc.domain.Category;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by oleht on 22.01.2018
- */
 public class CategoryCommandToCategoryTest {
 
     public static final Long ID_VALUE = new Long(1L);

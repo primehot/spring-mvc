@@ -9,10 +9,10 @@ import springdev.springmvc.domain.Category;
 import springdev.springmvc.domain.Recipe;
 
 /**
- * Created by oleht on 12.02.2018
+ * Created by jt on 6/21/17.
  */
 @Component
-public class RecipeToRecipeCommand implements Converter<Recipe, RecipeCommand> {
+public class RecipeToRecipeCommand implements Converter<Recipe, RecipeCommand>{
 
     private final CategoryToCategoryCommand categoryConveter;
     private final IngredientToIngredientCommand ingredientConverter;
@@ -43,6 +43,7 @@ public class RecipeToRecipeCommand implements Converter<Recipe, RecipeCommand> {
         command.setServings(source.getServings());
         command.setSource(source.getSource());
         command.setUrl(source.getUrl());
+        command.setImage(source.getImage());
         command.setNotes(notesConverter.convert(source.getNotes()));
 
         if (source.getCategories() != null && source.getCategories().size() > 0){

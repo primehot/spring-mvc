@@ -6,7 +6,7 @@ import springdev.springmvc.domain.Category;
 import java.util.Optional;
 
 /**
- * Created by oleht on 27.12.2017
+ * Created by jt on 6/13/17.
  */
 public interface CategoryRepository extends CrudRepository<Category, Long> {
 

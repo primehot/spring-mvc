@@ -8,7 +8,7 @@ import springdev.springmvc.commands.UnitOfMeasureCommand;
 import springdev.springmvc.domain.UnitOfMeasure;
 
 /**
- * Created by oleht on 12.02.2018
+ * Created by jt on 6/21/17.
  */
 @Component
 public class UnitOfMeasureToUnitOfMeasureCommand implements Converter<UnitOfMeasure, UnitOfMeasureCommand> {

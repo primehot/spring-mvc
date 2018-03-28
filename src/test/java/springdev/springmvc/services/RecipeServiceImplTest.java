@@ -1,7 +1,5 @@
 package springdev.springmvc.services;
 
-
-
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -21,7 +19,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.*;
 
 /**
- * Created by oleht on 22.01.2018
+ * Created by jt on 6/17/17.
  */
 public class RecipeServiceImplTest {
 

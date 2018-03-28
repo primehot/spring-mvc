@@ -5,12 +5,10 @@ import org.junit.Test;
 import springdev.springmvc.commands.CategoryCommand;
 import springdev.springmvc.domain.Category;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 /**
- * Created by oleht on 22.01.2018
+ * Created by jt on 6/21/17.
  */
 public class CategoryToCategoryCommandTest {
 

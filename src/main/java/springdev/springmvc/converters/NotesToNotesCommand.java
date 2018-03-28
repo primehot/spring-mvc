@@ -8,10 +8,10 @@ import springdev.springmvc.commands.NotesCommand;
 import springdev.springmvc.domain.Notes;
 
 /**
- * Created by oleht on 12.02.2018
+ * Created by jt on 6/21/17.
  */
 @Component
-public class NotesToNotesCommand implements Converter<Notes, NotesCommand> {
+public class NotesToNotesCommand implements Converter<Notes, NotesCommand>{
 
     @Synchronized
     @Nullable

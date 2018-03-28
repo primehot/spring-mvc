@@ -14,7 +14,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
 /**
- * Created by oleht on 22.01.2018
+ * Created by jt on 6/21/17.
  */
 public class IngredientToIngredientCommandTest {
 

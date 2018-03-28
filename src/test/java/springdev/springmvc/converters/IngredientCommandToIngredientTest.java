@@ -1,6 +1,5 @@
 package springdev.springmvc.converters;
 
-
 import org.junit.Before;
 import org.junit.Test;
 import springdev.springmvc.commands.IngredientCommand;
@@ -10,13 +9,8 @@ import springdev.springmvc.domain.Recipe;
 
 import java.math.BigDecimal;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
-/**
- * Created by oleht on 22.01.2018
- */
 public class IngredientCommandToIngredientTest {
 
     public static final Recipe RECIPE = new Recipe();

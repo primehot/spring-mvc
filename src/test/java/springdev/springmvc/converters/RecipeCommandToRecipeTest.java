@@ -11,9 +11,6 @@ import springdev.springmvc.domain.Recipe;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by oleht on 22.01.2018
- */
 public class RecipeCommandToRecipeTest {
     public static final Long RECIPE_ID = 1L;
     public static final Integer COOK_TIME = Integer.valueOf("5");

@@ -1,5 +1,6 @@
 package springdev.springmvc.bootstrap;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
@@ -15,8 +16,9 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * Created by oleht on 14.01.2018
+ * Created by jt on 6/13/17.
  */
+@Slf4j
 @Component
 public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEvent> {
 
@@ -34,40 +36,7 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
     @Transactional
     public void onApplicationEvent(ContextRefreshedEvent event) {
         recipeRepository.saveAll(getRecipes());
-    }
-
-    private void prepareData() {
-        UnitOfMeasure each = new UnitOfMeasure();
-        each.setDescription("Each");
-        unitOfMeasureRepository.save(each);
-
-        UnitOfMeasure tablespoon = new UnitOfMeasure();
-        tablespoon.setDescription("Tablespoon");
-        unitOfMeasureRepository.save(tablespoon);
-
-        UnitOfMeasure teaspoon = new UnitOfMeasure();
-        teaspoon.setDescription("Teaspoon");
-        unitOfMeasureRepository.save(teaspoon);
-
-        UnitOfMeasure dash = new UnitOfMeasure();
-        dash.setDescription("Dash");
-        unitOfMeasureRepository.save(dash);
-
-        UnitOfMeasure pint = new UnitOfMeasure();
-        pint.setDescription("Pint");
-        unitOfMeasureRepository.save(pint);
-
-        UnitOfMeasure cup = new UnitOfMeasure();
-        cup.setDescription("Cup");
-        unitOfMeasureRepository.save(cup);
-
-        Category american = new Category();
-        american.setDescription("American");
-        categoryRepository.save(american);
-
-        Category mexican = new Category();
-        mexican.setDescription("Mexican");
-        categoryRepository.save(mexican);
+        log.debug("Loading Bootstrap Data");
     }
 
     private List<Recipe> getRecipes() {
@@ -178,6 +147,10 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
         guacRecipe.getCategories().add(americanCategory);
         guacRecipe.getCategories().add(mexicanCategory);
 
+        guacRecipe.setUrl("http://www.simplyrecipes.com/recipes/perfect_guacamole/");
+        guacRecipe.setServings(4);
+        guacRecipe.setSource("Simply Recipes");
+
         //add to return list
         recipes.add(guacRecipe);
 
@@ -235,6 +208,10 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
 
         tacosRecipe.getCategories().add(americanCategory);
         tacosRecipe.getCategories().add(mexicanCategory);
+
+        tacosRecipe.setUrl("http://www.simplyrecipes.com/recipes/spicy_grilled_chicken_tacos/");
+        tacosRecipe.setServings(4);
+        tacosRecipe.setSource("Simply Recipes");
 
         recipes.add(tacosRecipe);
         return recipes;

@@ -7,9 +7,6 @@ import springdev.springmvc.domain.UnitOfMeasure;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by oleht on 22.01.2018
- */
 public class UnitOfMeasureCommandToUnitOfMeasureTest {
 
     public static final String DESCRIPTION = "description";

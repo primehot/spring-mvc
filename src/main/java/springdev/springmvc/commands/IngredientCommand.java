@@ -3,20 +3,19 @@ package springdev.springmvc.commands;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import springdev.springmvc.commands.UnitOfMeasureCommand;
 
 import java.math.BigDecimal;
 
 /**
- * Created by oleht on 12.02.2018
+ * Created by jt on 6/21/17.
  */
 @Getter
 @Setter
 @NoArgsConstructor
 public class IngredientCommand {
     private Long id;
+    private Long recipeId;
     private String description;
     private BigDecimal amount;
     private UnitOfMeasureCommand uom;
-
 }

@@ -7,9 +7,6 @@ import springdev.springmvc.domain.*;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by oleht on 22.01.2018
- */
 public class RecipeToRecipeCommandTest {
 
     public static final Long RECIPE_ID = 1L;

@@ -19,7 +19,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 /**
- * Created by oleht on 22.01.2018
+ * Created by jt on 6/19/17.
  */
 public class RecipeControllerTest {
 

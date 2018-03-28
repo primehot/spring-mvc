@@ -8,7 +8,7 @@ import springdev.springmvc.commands.CategoryCommand;
 import springdev.springmvc.domain.Category;
 
 /**
- * Created by oleht on 12.02.2018
+ * Created by jt on 6/21/17.
  */
 @Component
 public class CategoryCommandToCategory implements Converter<CategoryCommand, Category>{
@@ -17,6 +17,10 @@ public class CategoryCommandToCategory implements Converter<CategoryCommand, Cat
     @Nullable
     @Override
     public Category convert(CategoryCommand source) {
+        if (source == null) {
+            return null;
+        }
+
         final Category category = new Category();
         category.setId(source.getId());
         category.setDescription(source.getDescription());

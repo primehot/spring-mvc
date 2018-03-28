@@ -5,10 +5,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
- * Created by oleht on 12.02.2018
+ * Created by jt on 6/21/17.
  */
-@Getter
 @Setter
+@Getter
 @NoArgsConstructor
 public class CategoryCommand {
     private Long id;

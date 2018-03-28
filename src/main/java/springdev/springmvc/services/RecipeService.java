@@ -1,13 +1,12 @@
 package springdev.springmvc.services;
 
-
 import springdev.springmvc.commands.RecipeCommand;
 import springdev.springmvc.domain.Recipe;
 
 import java.util.Set;
 
 /**
- * Created by oleht on 22.01.2018
+ * Created by jt on 6/13/17.
  */
 public interface RecipeService {
 

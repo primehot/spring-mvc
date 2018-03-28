@@ -21,7 +21,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
 /**
- * Created by oleht on 22.01.2018
+ * Created by jt on 6/17/17.
  */
 public class IndexControllerTest {
 
