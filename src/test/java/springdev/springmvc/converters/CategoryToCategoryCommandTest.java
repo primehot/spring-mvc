@@ -8,7 +8,7 @@ import springdev.springmvc.domain.Category;
 import static org.junit.Assert.*;
 
 /**
- * Created by jt on 6/21/17.
+ * Created by oleh.tsyupaon 6/21/17.
  */
 public class CategoryToCategoryCommandTest {
 

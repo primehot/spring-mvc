@@ -9,7 +9,7 @@ import springdev.springmvc.domain.Category;
 import springdev.springmvc.domain.Recipe;
 
 /**
- * Created by jt on 6/21/17.
+ * Created by oleh.tsyupaon 6/21/17.
  */
 @Component
 public class RecipeToRecipeCommand implements Converter<Recipe, RecipeCommand>{

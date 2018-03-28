@@ -8,7 +8,7 @@ import springdev.springmvc.commands.IngredientCommand;
 import springdev.springmvc.domain.Ingredient;
 
 /**
- * Created by jt on 6/21/17.
+ * Created by oleh.tsyupaon 6/21/17.
  */
 @Component
 public class IngredientToIngredientCommand implements Converter<Ingredient, IngredientCommand> {

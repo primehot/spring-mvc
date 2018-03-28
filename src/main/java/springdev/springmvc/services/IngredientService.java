@@ -3,7 +3,7 @@ package springdev.springmvc.services;
 import springdev.springmvc.commands.IngredientCommand;
 
 /**
- * Created by jt on 6/27/17.
+ * Created by oleh.tsyupaon 6/27/17.
  */
 public interface IngredientService {
 

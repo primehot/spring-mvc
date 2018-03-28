@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import springdev.springmvc.services.RecipeService;
 
 /**
- * Created by jt on 6/1/17.
+ * Created by oleh.tsyupaon 6/1/17.
  */
 @Slf4j
 @Controller

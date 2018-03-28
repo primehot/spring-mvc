@@ -8,7 +8,7 @@ import springdev.springmvc.commands.CategoryCommand;
 import springdev.springmvc.domain.Category;
 
 /**
- * Created by jt on 6/21/17.
+ * Created by oleh.tsyupaon 6/21/17.
  */
 @Component
 public class CategoryCommandToCategory implements Converter<CategoryCommand, Category>{

@@ -8,7 +8,7 @@ import springdev.springmvc.commands.RecipeCommand;
 import springdev.springmvc.domain.Recipe;
 
 /**
- * Created by jt on 6/21/17.
+ * Created by oleh.tsyupaon 6/21/17.
  */
 @Component
 public class RecipeCommandToRecipe implements Converter<RecipeCommand, Recipe> {

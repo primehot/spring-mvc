@@ -3,7 +3,7 @@ package springdev.springmvc.services;
 import org.springframework.web.multipart.MultipartFile;
 
 /**
- * Created by jt on 7/3/17.
+ * Created by oleh.tsyupaon 7/3/17.
  */
 public interface ImageService {
 

@@ -8,7 +8,7 @@ import springdev.springmvc.commands.NotesCommand;
 import springdev.springmvc.domain.Notes;
 
 /**
- * Created by jt on 6/21/17.
+ * Created by oleh.tsyupaon 6/21/17.
  */
 @Component
 public class NotesToNotesCommand implements Converter<Notes, NotesCommand>{

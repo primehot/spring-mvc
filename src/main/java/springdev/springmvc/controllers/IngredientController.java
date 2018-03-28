@@ -15,7 +15,7 @@ import springdev.springmvc.services.RecipeService;
 import springdev.springmvc.services.UnitOfMeasureService;
 
 /**
- * Created by jt on 6/28/17.
+ * Created by oleh.tsyupaon 6/28/17.
  */
 @Slf4j
 @Controller
